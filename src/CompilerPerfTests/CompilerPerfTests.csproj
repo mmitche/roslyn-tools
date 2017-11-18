@@ -1,0 +1,16 @@
+<!-- Copyright (c)  Microsoft.  All Rights Reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information. -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <ArtifactsDir>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)\..\..\artifacts\$(Configuration)'))\</ArtifactsDir>
+    <OutputPath>$(ArtifactsDir)bin\$(MSBuildProjectName)\</OutputPath>
+    <IntermediateOutputPath>$(ArtifactsDir)obj\$(MSBuildProjectName)\</IntermediateOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.10.9" />
+    <PackageReference Include="Mono.Options" Version="5.3.0.1" />
+  </ItemGroup>
+</Project>
